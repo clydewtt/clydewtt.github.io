@@ -26,7 +26,7 @@ layout: default
   {% if page.bio %}
   <section class="post-section">
     <h3>About</h3>
-    <p>{{ page.bio | markdownify }}</p>
+    {{ page.bio | markdownify }}
   </section>
   {% endif %}
 </article>

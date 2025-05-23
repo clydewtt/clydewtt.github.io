@@ -23,7 +23,7 @@ layout: default
   {% if page.about.bio %}
   <section class="about-bio post-section">
     <h2>My Story</h2>
-    <p>{{ page.about.bio | markdownify }}</p>
+    {{ page.about.bio | markdownify }}
   </section>
   {% endif %}
 </article>

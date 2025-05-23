@@ -20,7 +20,7 @@ layout: default
   {% if page.problem %}
   <section class="post-section">
     <h3>Problem</h3>
-    <p>{{ page.problem | markdownify }}</p>
+    {{ page.problem | markdownify }}
   </section>
   {% endif %}
 
@@ -35,7 +35,7 @@ layout: default
   {% if page.outcome %}
   <section class="post-section">
     <h3>Expected Outcome</h3>
-    <p>{{ page.outcome | markdownify }}</p>
+    {{ page.outcome | markdownify }}
   </section>
   {% endif %}
 
