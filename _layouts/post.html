@@ -2,16 +2,44 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
-{% if page.by %}
-  <p><strong>By:</strong> {{ page.by }}</p>
-{% endif %}
+<article class="blog-post">
+  <header class="post-header">
+    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-author">By {{ page.author | default: site.author }}</p>
+  </header>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+  <section class="post-content">
+    {{ content }}
+  </section>
 
-{{content}}
+  {% if page.what_i_learned %}
+  <section class="post-section">
+    <h3>What I Learned</h3>
+    <p>{{ page.what_i_learned | markdownify }}</p>
+  </section>
+  {% endif %}
 
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}
+  {% if page.blockers %}
+  <section class="post-section">
+    <h3>Blockers</h3>
+    <p>{{ page.blockers | markdownify }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.reflection %}
+  <section class="post-section">
+    <h3>Reflection</h3>
+    <p>{{ page.reflection | markdownify }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.tags %}
+  <footer class="post-tags">
+    <span>Tags:</span>
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </footer>
+  {% endif %}
+</article>

@@ -1,116 +1,153 @@
-# CEAMLS SAIRI (Summer AI Research Institute) 2025
+# CEAMLS SAIRI Summer Site – User Guide
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/minimal/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-minimal.svg)](https://badge.fury.io/rb/jekyll-theme-minimal)
+Welcome! This repository hosts your personal research site built on Jekyll + Minimal theme. Below you’ll find everything you need to:
 
-This is the website template we will be using for the Research Institute where you will be writing information about yourself, faculty and gradute student mentors, your project, and keep a weekly blog about what you did throughout the week. 
+* Add new daily blog posts
+* Edit your **About Me**, **About My Mentor**, and **About My Project** pages
+* Manage images and assets
+* Tweak your configuration (`_config.yml`)
+* Run & deploy locally or to GitHub Pages
 
-![Thumbnail of Minimal](thumbnail.png)
+---
 
-## Usage
+## 📂 Project Structure
 
-To use the Minimal theme:
-
-1. Add the following to your site's `_config.yml`:
-
-    ```yml
-    remote_theme: pages-themes/minimal@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
-    ```
-
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
-
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
-
-## Customizing
-
-### Configuration variables
-
-Minimal will respect the following variables, if set in your site's `_config.yml`:
-
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
+```
+├── _config.yml           ← Site settings
+├── _layouts/             ← Custom layouts (default, post, mentor, about, project, home)
+├── _posts/               ← Daily blog posts (YYYY-MM-DD-slug.md)
+├── pages/                ← Standalone pages (about-*.md, my-blog.md, index.md)
+├── assets/
+│   ├── css/style.scss    ← Your custom SCSS overrides
+│   └── images/           ← Store profile, mentor, project, blog images here
+└── README.md             ← This guide
 ```
 
-Additionally, you may choose to set the following optional variables:
+---
 
-```yml
-show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
+## ⚙️ Configuration (`_config.yml`)
+
+Open `_config.yml` and set:
+
+```yaml
+title: "YOUR NAME"  
+description: "CEAMLS SAIRI Summer 2025 Research Site"  
+remote_theme: pages-themes/minimal@v0.2.0  
+plugins:
+  - jekyll-remote-theme
+future: true            
 ```
 
-### Stylesheet
+---
 
-If you'd like to add your own custom styles:
+## 📝 Adding a New Blog Post
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+1. Create a file in `_posts/` named `YYYY-MM-DD-day-N.md` (e.g. `2025-06-12-day-6.md`).
+2. Add Front Matter:
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+```yaml
+---
+layout: post
+title: "Day N – YOUR TITLE"
+date: YYYY-MM-DD
+author: YOUR NAME
+---
+```
 
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+3. Write your post content following the structure below:
 
-### Layouts
+```markdown
+### What I Learned
+- …
 
-If you'd like to change the theme's HTML layout:
+### Blockers
+- …
 
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/minimal/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-3. Create a file called `/_layouts/default.html` in your site
-4. Paste the default layout content copied in the first step
-5. Customize the layout as you'd like
+### Reflection
+I feel…
+```
 
-### Customizing Google Analytics code
+---
 
-Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
+## ✍️ Editing About Pages
 
-### Overriding GitHub-generated URLs
+Standalone pages live in `pages/`. Each uses a layout:
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+* **About Me** → `layout: about`
+* **About My Mentor** → `layout: mentor`
+* **About My Project** → `layout: project`
 
-1. Look at [the template source](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+### Example `about-me.md`
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+```yaml
+---
+layout: about
+title: About Me
+permalink: /about-me.html
 
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+about:
+  name: Michael Adeleke
+  role: Senior, Computer Science Major at Morgan State University
+  image: /assets/images/me.jpg
+  linkedin: https://linkedin.com/in/michael-adeleke-4a1228217/
+  bio: |
+    I’m a senior at Morgan State University …
+---
+```
 
-## Roadmap
+---
 
-See the [open issues](https://github.com/pages-themes/minimal/issues) for a list of proposed features (and known issues).
+## 🖼️ Managing Images
 
-## Project philosophy
+* Put images in `assets/images/`
+* Reference with:
 
-The Minimal theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+```liquid
+<img src="{{ '/assets/images/example.jpg' | relative_url }}" alt="Example">
+```
 
-## Contributing
+---
 
-Interested in contributing to Minimal? We'd love your help. Minimal is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+## 💅 Custom Styles
 
-### Previewing the theme locally
+Use `assets/css/style.scss`:
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
+```scss
+---
+---
+@import "{{ site.theme }}";
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/minimal`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+/* Your styles here */
+.profile-card { /* ... */ }
+.blog-toc a { /* ... */ }
+```
 
-### Running tests
+---
 
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
+## 🚀 Running Locally
+
+```bash
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+Preview at `http://localhost:4000`
+
+---
+
+## 📤 Deployment
+
+Just push to `main`. GitHub Pages will build your site automatically.
+
+---
+
+## 🔎 Tips
+
+* **Images:** Store in `assets/images`.
+* **Blog TOC:** Posts are grouped into weeks automatically.
+* **Layouts:** Add new layouts in `_layouts/`, use them via `layout:` in the front matter.
+* **Front Matter:** Always include correct `date:` so posts sort and display properly.
+
+---
+
+Enjoy writing and sharing your research journey! 📚💼

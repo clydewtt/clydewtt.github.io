@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<article class="about-me-page fade-slide-up">
+  <section class="about-hero">
+    {% if page.about.image %}
+      <img src="{{ page.about.image | relative_url }}" alt="{{ page.about.name }}" class="about-photo" />
+    {% endif %}
+
+    <div class="about-intro">
+      <h1>{{ page.about.name }}</h1>
+      {% if page.about.role %}
+        <p class="about-subtitle">{{ page.about.role }}</p>
+      {% endif %}
+
+      {% if page.about.linkedin %}
+        <a href="{{ page.about.linkedin }}" class="about-button" target="_blank">Connect on LinkedIn ↗</a>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if page.about.bio %}
+  <section class="about-bio post-section">
+    <h2>My Story</h2>
+    <p>{{ page.about.bio | markdownify }}</p>
+  </section>
+  {% endif %}
+</article>
