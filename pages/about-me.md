@@ -4,14 +4,14 @@ title: About Me
 permalink: /about-me.html
 
 about:
-  name: Michael Adeleke
-  role: Senior, Computer Science Major at Morgan State University
+  name: Ta'quavian Johnson
+  role: Junior, Electrical Engineering Major at Example University
   image: /assets/images/me.jpg
-  linkedin: https://www.linkedin.com/in/michael-adeleke-4a1228217/
+  linkedin: https://www.linkedin.com/in/taquavian-johnson/
   bio: |
-    I’m currently a senior studying Computer Science at Morgan State University in Baltimore, Maryland. I expect to graduate in 2025.
+    I’m currently a junior studying Electrical Engineering at Example University in Atlanta, Georgia. I expect to graduate in 2026.
 
-    I’m deeply passionate about building technology that empowers people. Whether I’m writing code, collaborating on research, or leading a student organization, I love turning ideas into real, useful solutions.
+    My work explores the intersection of hardware and intelligence—how wearable devices and embedded systems can help people better understand their health and environment.
 
-    Outside of tech, I’m into photography, community engagement, and exploring how creativity blends with logic in everything I do.
+    When I’m not working on research, I enjoy mentoring younger students, playing jazz trumpet, and tinkering with Raspberry Pi projects in my free time.
 ---

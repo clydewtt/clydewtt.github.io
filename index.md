@@ -1,16 +1,16 @@
 ---
 layout: home
-title: Michael Adeleke
+title: Ta'quavian Johnson
 description: CEAMLS SAIRI Summer 2025 Research Website
 
-motto: "Turning ideas into real-world impact — one line of code at a time."
+motto: "Harnessing code, curiosity, and creativity to shape tomorrow."
 
 quick_facts:
-  - "🎓 Senior, Computer Science @ Morgan State University"
-  - "🧠 Research: Brain-Computer Interfaces + Human-Robot Interaction"
-  - "📍 Based in Baltimore, Maryland"
-  - "🌱 Building my future one summer at a time (CEAMLS SAIRI 2025)"
+  - "🎓 Junior, Electrical Engineering @ Example University"
+  - "🔬 Research: AI-Powered Wearables + Signal Processing"
+  - "📍 Based in Atlanta, GA"
+  - "🚀 Passionate about building smart systems for real-world impact"
 
-linkedin: https://www.linkedin.com/in/michael-adeleke-4a1228217/
+linkedin: https://www.linkedin.com/in/taquavian-johnson/
 image: /assets/images/me.jpg
 ---

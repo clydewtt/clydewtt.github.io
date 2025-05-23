@@ -3,33 +3,32 @@ layout: project
 title: About My Project
 permalink: /about-my-project.html
 
-subtitle: Human-Robot Interaction & Physiological Computing
-project_title: "mBot Neo: Bridging Biosignals and Robotics in Education"
+subtitle: Neural Engineering & Assistive Robotics
+project_title: "NeuroLink Assist: Adaptive Robotics through Brain Signal Decoding"
 
 problem: |
-  There is a lack of research exploring how to build educational software that integrates
-  physical robots with physiological sensors. The goal is to investigate how biosignals
-  (like EEG and EMG) can enhance student interaction and learning through responsive robotics.
+  Individuals with severe motor disabilities often struggle with basic tasks that could be aided by robotic assistance. However, there is a lack of accessible and adaptive systems that respond naturally to the user's intent via brain-computer interfaces.
+
+  This project seeks to explore how neural signals can be translated into reliable control commands for assistive robots, improving autonomy and quality of life.
 
 approach: |
-  The system will follow a three-stage process:
+  The project follows a four-phase pipeline:
 
-  - Capture physiological data such as EEG and EMG from the human body  
-  - Process raw sensor data and classify events like gestures or emotional states  
-  - Map classified outputs to actions or behaviors in a physical robot (e.g., mBot Neo)
+  - Collect EEG data during imagined movements using a non-invasive BCI headset
+  - Train machine learning models to decode intent from neural patterns
+  - Integrate real-time signal classification with a robotic arm interface
+  - Evaluate system performance in simulated daily activities (e.g., object grasping, pointing)
 
-  These steps aim to establish a closed-loop interaction between human signals and robotic behaviors.
-
+  Open-source tools such as OpenBCI, Python (MNE, Scikit-learn), and ROS (Robot Operating System) will be used to prototype the system.
 
 outcome: |
-  This project is expected to result in a conference poster presentation at the end of the DREU program.
-  The poster will highlight the system's technical architecture and findings from experimental use.
+  By the end of the program, the project will result in a working prototype of a BCI-controlled robotic arm and a poster presentation outlining the system architecture, training pipeline, and evaluation metrics. Insights from the user study will inform future directions in adaptive assistive technology.
 
 grad_mentor:
   name: Jamal Carter
   linkedin: https://www.linkedin.com/in/jamal-carter
 
 faculty_mentor:
-  name: Dr. Aisha Williams
-  linkedin: https://www.linkedin.com/in/aisha-williams
+  name: Dr. Elijah Freeman
+  linkedin: https://www.linkedin.com/in/dr-elijah-freeman
 ---
