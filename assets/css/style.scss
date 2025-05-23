@@ -332,6 +332,8 @@ footer.footer {
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #666;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   border-top: 1px solid #eee;
 }
@@ -344,6 +346,13 @@ footer.footer {
   margin-right: 0.4rem;
   border-radius: 5px;
   font-size: 0.85rem;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: lighten($secondary, 5%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
 }
 
 .mentor-profile {

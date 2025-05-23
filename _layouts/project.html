@@ -39,6 +39,11 @@ layout: default
   </section>
   {% endif %}
 
+  {% if page.final_report_url %}
+  <p><strong>Final Report:</strong> <a href="{{ page.final_report_url }}" target="_blank">View PDF</a></p>
+  {% endif %}
+
+
   {% if page.grad_mentor %}
 <section class="post-section">
   <h3>Graduate Student Mentor</h3>

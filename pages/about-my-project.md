@@ -24,6 +24,8 @@ approach: |
 outcome: |
   By the end of the program, the project will result in a working prototype of a BCI-controlled robotic arm and a poster presentation outlining the system architecture, training pipeline, and evaluation metrics. Insights from the user study will inform future directions in adaptive assistive technology.
 
+final_report_url: https://dl.icdst.org/pdfs/files/22e390b2eb0c8e951f3a742fda5b2d1d.pdf
+
 grad_mentor:
   name: Jamal Carter
   linkedin: https://www.linkedin.com/in/jamal-carter
