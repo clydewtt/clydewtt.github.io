@@ -4,7 +4,7 @@ set -e
 
 # Warn if RubyGems is outdated
 echo "👉 Checking RubyGems version..."
-gem update --system 3.2.3
+gem update --system
 
 # Step 1: Build the site
 echo "🚧 Building Jekyll site..."
