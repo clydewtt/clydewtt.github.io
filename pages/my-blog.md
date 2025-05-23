@@ -4,23 +4,21 @@ title: My Blog
 permalink: /my-blog.html
 ---
 
-# 📚 My Research Blog
+<div class="blog-post">
+  <h1>📚 My Research Blog</h1>
+  <p>Welcome to my daily research log for the CEAMLS SAIRI Summer 2025 program. Each entry reflects hands-on learning, challenges, and reflections.</p>
+  <hr />
 
-Welcome to my daily research log for the CEAMLS SAIRI Summer 2025 program. Each entry reflects hands-on learning, challenges, and reflections.
-
----
-
-## 📅 Table of Contents
-
+  <h2>📅 Table of Contents</h2>
 <ul class="blog-toc">
   {% assign posts             = site.posts | sort: "date" %}
   {% assign seconds_per_day   = 86400 %}
   {% assign previous_monday   = "" %}
   {% assign week_counter      = 0 %}
 
-  {% for post in posts %}
-    {% assign post_ts    = post.date | date: "%s" %}
-    {% assign dow        = post.date | date: "%w" | plus: 0 %}
+{% for post in posts %}
+{% assign post_ts    = post.date | date: "%s" %}
+{% assign dow        = post.date | date: "%w" | plus: 0 %}
 
     {%- comment -%} calculate days to backtrack to Monday {%- endcomment -%}
     {% if dow == 0 %}
@@ -58,5 +56,8 @@ Welcome to my daily research log for the CEAMLS SAIRI Summer 2025 program. Each 
         </details>
       </li>
     {% endif %}
-  {% endfor %}
+
+{% endfor %}
+
 </ul>
+</div>

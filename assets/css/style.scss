@@ -143,6 +143,27 @@ strong {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    45deg,
+    #f0f4ff,
+    #f0f4ff 10px,
+    #e9e9e9 10px,
+    #e9e9e9 20px
+  );
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #5E93DA, #EC4B4B);
+    opacity: 0.2;
+    filter: blur(80px);
+    z-index: -1;
+  }
 }
 
 .content-area:hover {
@@ -225,6 +246,7 @@ footer.footer {
   justify-content: center;
   padding: 3rem 1rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .profile-card {
@@ -234,6 +256,7 @@ footer.footer {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: 10;
 }
 
 .profile-card:hover {
