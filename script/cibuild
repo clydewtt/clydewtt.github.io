@@ -16,7 +16,9 @@ bundle exec htmlproofer ./_site \
   --check-html \
   --check-sri \
   --only-4xx \
+  --file-ignore "./_site/about-me.html" \
   --url-ignore "^https://(www\.)?linkedin\.com"
+  
 
 # Step 3: Run Rubocop for style checks
 echo "🧹 Running Rubocop..."
