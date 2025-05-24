@@ -1,9 +1,8 @@
 ---
 layout: mentor
-title: About My Mentor
+title: About My Mentors
 permalink: /about-my-mentor.html
 
-title: About My Mentor
 graduate_mentor:
   name: Jordan Bailey
   title: PhD Student, Electrical Engineering

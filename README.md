@@ -3,7 +3,7 @@
 Welcome! This repository hosts your personal research site built on Jekyll + Minimal theme. Below you’ll find everything you need to:
 
 * Add new daily blog posts
-* Edit your **About Me**, **About My Mentor**, and **About My Project** pages
+* Edit your **About Me**, **About My Mentors**, and **About My Project** pages
 * Manage images and assets
 * Tweak your configuration (`_config.yml`)
 * Run & deploy locally or to GitHub Pages
@@ -74,7 +74,7 @@ I feel…
 Standalone pages live in `pages/`. Each uses a layout:
 
 * **About Me** → `layout: about`
-* **About My Mentor** → `layout: mentor`
+* **About My Mentors** → `layout: mentor`
 * **About My Project** → `layout: project`
 
 ### Example `about-me.md`
