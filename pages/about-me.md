@@ -4,12 +4,12 @@ title: About Me
 permalink: /about-me.html
 
 about:
-  name: Ta'quavian Johnson
-  role: Junior, Electrical Engineering Major at Example University
-  image: /assets/images/me.jpg
-  linkedin: https://www.linkedin.com/in/taquavian-johnson/
+  name: Clyde Tandjong
+  role: Senior, CS @ MSU
+  image: /assets/images/me.jpeg
+  linkedin: https://www.linkedin.com/in/clyde-tandjong-7a3ab0150/
   bio: |
-    I’m currently a junior studying Electrical Engineering at Example University in Atlanta, Georgia. I expect to graduate in 2026.
+    I’m currently a senior studying Computer Science at Morgan State University in Baltimore, Maryland. I expect to graduate in 2025.
 
     My work explores the intersection of hardware and intelligence—how wearable devices and embedded systems can help people better understand their health and environment.
 
@@ -17,7 +17,7 @@ about:
 
   hobbies:
     - icon: 🎺
-      title: Playing Guitar
+      title: Playing Trumpet
       description: I’ve been playing trumpet since middle school and love improvising to Coltrane and Miles Davis tracks.
     - icon: 🤖
       title: Raspberry Pi Projects
