@@ -12,5 +12,5 @@ quick_facts:
   - "🚀 Passionate about building smart systems for real-world impact"
 
 linkedin: https://www.linkedin.com/in/clyde-tandjong-7a3ab0150/
-image: /assets/images/me.jpg
+image: /assets/images/me.jpeg
 ---
